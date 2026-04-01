@@ -1,0 +1,272 @@
+body{
+    font-family:  'Calibri','Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    flex-direction: column;
+    background-image: radial-gradient(rgb(246, 223, 223), rgb(208, 208, 238));
+}
+
+img{
+    height: 35%;
+    width: 35%;
+}
+
+/* .container-edit{
+    display: none;
+} */
+
+.container-preview{
+  width: min(95vw, 800px);   /* responsive width */
+  aspect-ratio: 210 / 297;   /* A4 shape */
+   
+  /* margin: 20px auto; */
+  padding: 45px;
+ 
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-sizing: border-box;
+  display: none;
+  
+}
+
+.in-preview{
+    border: 2.6px solid black;
+    height: 100%;
+}
+
+
+table, th, td{
+
+
+    width: 100%;
+    max-width: 800px;
+    
+     /* border: 1px solid black; */
+     padding-top: 0px;
+
+    
+    padding: 0px;
+}
+
+th, td{
+   
+   border-spacing: 0px;
+   padding: 0;
+
+}
+table{
+    /* border: 2px solid black; */
+    overflow: hidden;
+   
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 22px;
+   
+}
+
+/* .space{
+    background-color: aqua;
+    width: 100%;
+    height: 200px;
+    
+} */
+
+td pre{
+    line-height: 2;
+    text-align: left;
+   
+}
+/* submitted to top*/
+#sb{
+   margin-top: 0;
+   text-align: left;
+   /* border: 1px solid black; */
+   margin-bottom: 1px;
+   margin-left: 22px;
+   font-weight: 550;
+   font-size: 28px;
+}
+
+#prew-by{
+    padding: 0;
+    margin-left: 22px;
+    /* border: 1px solid black; */
+    margin-top: 1px;
+    margin-bottom: 1px;
+    line-height: 1.6;
+    font-size: 26px;
+}
+
+/* container Seperate div for sub to */
+.sto{
+  
+    /* border: 2px solid black;
+    background-color: rgb(166, 243, 243); */
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    justify-content: center;
+    padding-right: 7px;
+    margin-top: 25px;
+
+}
+.sto p{
+    /* margin-top: 20px; */
+    /* border: 1px solid black; */
+    padding-right: 60px;
+    text-align: left;
+    margin: 0;
+    width: 300px;
+    margin-bottom: 5px;
+    font-weight: 550;
+    font-size: 28px;
+}
+#st{
+    margin-right: 30px;
+} 
+
+#prew-to{
+    margin-top: 0;
+    /* border: 1px solid black;  */
+    width: 390px;
+    line-height: 1.6;
+    font-size: 26px;
+    white-space: pre-wrap;   
+}
+
+/* td h2{
+    line-height: 5px;
+}  */
+
+#p-assign{
+    /* border: 1px solid black; */
+    margin-top: 10px;
+    margin-bottom: 14px;
+    font-size: 38px;
+}
+
+#p-subs{
+   margin-top: 0;
+   /* border: 1px solid black; */
+   height: 80px;
+   font-size: 28px;
+   
+}
+
+th h1{
+    font-size: 50px;
+}
+
+
+/* download */
+#a4 {
+  /* border: 3px solid red; */
+  /*794px */
+  width: 785px;   /* A4 width */
+  height: 1123px; /* A4 height */
+  /*1123px */
+}
+
+/*Conatainer edit code */
+#cover-image{
+    height: 100px;
+    width: 100px;
+}
+
+.container-edit{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    background-image: radial-gradient(rgb(33, 250, 163), rgb(171, 255, 235), rgb(254, 199, 255));
+    padding: 10px;
+    border: 2px solid rgb(189, 135, 243);
+    border-radius: 10px;
+}
+
+
+.container-edit input, select{
+    background-image: linear-gradient(to right,rgb(251, 233, 236), rgb(219, 251, 240), rgb(246, 246, 255));
+    border: 2px solid rgb(5, 197, 94);
+    border-radius: 8px;
+    height: 30px;
+    width: 45vw;
+}
+
+button{
+    background-color: rgb(252, 62, 173);
+    color: white;
+    border-radius: 6px;
+    border: 2px solid red;
+    padding: 4px;
+    height: 35px;
+    width: 150px;
+}
+
+.container-edit h4{
+    background-color: rgb(255, 4, 146);
+    border-radius: 10px;
+    border: 2px solid rgb(255, 207, 244);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+textarea{
+    width: 30vw;
+    resize: none;
+    height: 120px;
+    border: 1.5px solid rgb(0, 188, 235);
+    border-radius: 10px;
+} 
+
+button:hover{
+    background-color: rgb(253, 253, 253);
+    color: black;
+}
+
+#logos{
+    background-color: rgb(255, 170, 219);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    border: 3px solid rgb(249, 61, 117);
+    border-radius: 10px
+}
+
+.btn-hold{
+    display: none;
+    justify-content: space-around;
+    /* border: 1px solid red; */
+    width: 340px;
+}
+
+input:focus {
+  outline: none;              /* remove default outline */
+  border: 2px solid #ff0077;  /* custom highlight color */
+  box-shadow: 0 0 5px #ff00a2; /* glowing effect */
+ 
+}
+
+@media (max-width : 700px){
+  .container-edit{
+    background-image: radial-gradient(rgb(255, 179, 179), rgb(193, 232, 255));
+    width:100%;
+  }
+
+  .container-edit input, select{
+    border-radius: 8px;
+    height: 30px;
+    width: 95%;
+}
+    textarea{
+    width: 90vw;
+    resize: none;
+    border: 1.5px solid rgb(0, 188, 235);
+    border-radius: 10px;
+} 
+}

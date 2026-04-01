@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cover.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
+    <script src="cover.js" defer></script>
+</head>
+<body>
+    
+    <div class="container-edit">
+        <h4>Hi! Welcome to front page designer, Enter the details below for desired output. Simple, Fast & Easy😀!</h4>
+       
+        <label for="clg">
+            Select institution name:
+        </label>  
+        
+      
+      
+        <select id="clg">
+          <option value="Darrang College, Tezpur">Darrang College, Tezpur</option>
+          <option value="Tezpur College, Tezpur">Tezpur College, Tezpur</option>        
+          <option value="St. Mary's Senior Secondary School">St. Mary's Senior Secondary School</option>    
+          <option value="Tezpur Gurukul">Tezpur Gurukul</option>  
+        </select>
+       <br>
+       <label for="cllg-name">
+             Institution name:
+        </label> 
+        <input type="text" placeholder="Enter your college name" id="cllg-name">
+        <!-- <h5 id="cllg-name"></h5> -->
+         <br>
+         <div id="logos">
+            <img src="darrang.png" id="cover-image"> <br>
+            <label for="input-file">
+                Change Logo (Selected Darrang College.png by default)
+            </label>
+            <input type="file" id="input-file"> <br>
+          </div>
+        <label for="assign-name">
+        Assignment name:
+         </label>
+        <input type="text" placeholder="Enter Assignment" value="Assignment of Python Libraries" id="assign-name"><br>
+       
+        <label for="subs">
+        Subject/topic name:
+        </label>
+
+        <input type="text" placeholder="Enter Subject/topic" value="Topic : Explain types of ..." id="subs"><br>
+        
+        <br>
+        <label for="submit-by">
+            Enter submitted by:
+        </label>
+
+       <div class="sub-by">
+        <textarea id="submit-by">
+Name	        :	Shadow
+Class	        : 	12th
+GU Roll.        :	UT-241-225-0000
+Enrollment No. 	:	25110000
+Subject	        :	Pyhton</textarea>
+        </label>
+        </div>
+
+        <label for="submit-to">
+            Enter submitted to:
+        </label>
+        <div class="sub-to">
+            <textarea id="submit-to">
+Department of Geography,
+Date:  3-04-2026
+            </textarea>
+        </div><br>
+        <p>Version 1.0(Alpha) : Long text may break structure </p>
+
+        <button onclick="next()" id="nxt">NEXT >></button>
+        
+    </div>
+
+    <div class="btn-hold">
+        <button onclick="edit()" id="edt"><< Edit</button>
+        <button type="button" onclick="savepdf()" id="dwn">Download as PDF</button>
+    </div>
+ 
+ 
+ <div class="container-preview" id="a4">
+       
+        <div class="in-preview">
+         
+      
+
+        <table>
+            <tr>
+                <th><h1 id="p-cllg">Darrang College</h1></th>
+            </tr>
+            <tr>
+                 <td><img src="darrang.png" id="p-image"> </td>
+            </tr>
+
+            <tr>
+                 <td></rd><h2 id="p-assign">Assignment of MDC</h2></td>
+            </tr>
+
+            <tr>
+                <td><h3 id="p-subs">Subject/topic : Computer Science</h3></td>
+            </tr>
+            <tr>
+               <td><div class="space"></div>
+                </td>
+            </tr>
+            <tr>
+                 <td>
+                    <p id="sb">Submitted by:</p>
+                <Pre id="prew-by">Name : Shadow</Pre>
+            </td>
+            </tr>
+
+            <tr>
+               
+               <td> <div class="sto">
+                 <p id="st">Submitted to:</p>
+                <pre id="prew-to">
+Submitted 
+Department of Geogrphy
+                    </pre></div></td>
+                
+            </tr>
+
+        </table>
+      </div>
+    </div>
+
+   
+</body>
+</html>

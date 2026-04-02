@@ -93,7 +93,7 @@ function savepdf(){
 html2pdf().set({
   margin: 0,
   filename: "Front-page.pdf",
-  image: { type: 'png', quality: 1 },
+  image: { type: 'jpeg', quality: 0.6 },
   html2canvas: { scale: 3, useCORS: true },
   jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
 })

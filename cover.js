@@ -25,6 +25,8 @@ function next(){
     nxtbtn.style.display="none";
    
     
+    
+    
     //get value
     let clg = document.getElementById("cllg-name").value;
     let cover = document.getElementById("cover-image").getAttribute("src");
@@ -42,8 +44,11 @@ function next(){
     document.getElementById("p-image").src=cover;
     document.getElementById("prew-by").textContent = subby;
     document.getElementById("prew-to").textContent = subto;
+    
+     //scroll to top 
+    window.scrollTo({top: 0, behavior: "smooth"});
 
-    alert("To get better view in mobile devices you can switch to desktop mode")
+    // alert("To get better view in mobile devices you can switch to desktop mode")
 }
 
 //back to editing
@@ -73,17 +78,41 @@ clgg.addEventListener("change", () =>{
 })
 
 function savepdf(){
-    const pdf=document.getElementById("a4");
-    console.log(pdf);
+   //const pdf=document.getElementById("a4");
+    const scaler=document.querySelector(".container-preview");
+    const swth =document.getElementById("switch");
+    // scale.style.translate="translateY(250px)";
+    console.log(window.getComputedStyle(swth).display);
+
+   if(window.getComputedStyle(swth).display=="block"){
+   console.log("Executed");
+   scaler.style.transform="translateY(250px) scale(1)";
+   }
+
 
 html2pdf().set({
   margin: 0,
   filename: "Front-page.pdf",
-  image: { type: 'jpeg', quality: 0.6 },
+  image: { type: 'png', quality: 1 },
   html2canvas: { scale: 3, useCORS: true },
   jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
 })
 .from(document.getElementById("a4"))
-.save();
+.save()
+.then(() => {
+
+ if(window.getComputedStyle(swth).display=="block"){
+   console.log("Executed block 2");
+   scaler.style.transform="translateY(0) scale(0.45)";
+   
+//    console.log("hdjh",window.getComputedStyle(scaler).translate)
+   }else{
+    scaler.style.transform="translateY(0) scale(1)";
+   }
+
+
+});
+
+
 }
 

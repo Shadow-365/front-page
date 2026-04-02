@@ -17,30 +17,48 @@ img{
 } */
 
 .container-preview{
-  width: min(95vw, 800px);   /* responsive width */
-  aspect-ratio: 210 / 297;   /* A4 shape */
+  /* width: min(95vw, 800px);   responsive width
+  aspect-ratio: 210 / 297;   A4 shape */
    
   /* margin: 20px auto; */
   padding: 45px;
- 
   background: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   box-sizing: border-box;
   display: none;
+  /* border: 2px solid red; */
+  width: 210mm;   
+  height: 296.8mm;
+
+  /* transform: scale(1);
+  translate: 0 0; */
+
   
 }
 
+/* download */
+/* #a4{
+  /* border: 3px solid red; */
+  /*794px */
+  /* width: 210mm;   785px A4 width  210mm */
+  /* height: 297mm; A4 1123px height 297mm */
+  /*1123px */
+
+  /* width: 210mm;   
+  height: 297mm; 
+}*/
+
 .in-preview{
-    border: 2.6px solid black;
+    border: 2.6px solid rgb(0, 0, 0);
     height: 100%;
 }
 
 
 table, th, td{
 
-
-    width: 100%;
-    max-width: 800px;
+    
+    width: 100%; /*100%*/
+    max-width: 800px; /*800px*/
     
      /* border: 1px solid black; */
      padding-top: 0px;
@@ -159,14 +177,7 @@ th h1{
 }
 
 
-/* download */
-#a4 {
-  /* border: 3px solid red; */
-  /*794px */
-  width: 785px;   /* A4 width */
-  height: 1123px; /* A4 height */
-  /*1123px */
-}
+
 
 /*Conatainer edit code */
 #cover-image{
@@ -181,7 +192,7 @@ th h1{
     justify-content: center;
     align-items: center;
     width: 60%;
-    background-image: radial-gradient(rgb(33, 250, 163), rgb(171, 255, 235), rgb(254, 199, 255));
+    background-image: radial-gradient(rgb(148, 229, 237), rgb(207, 255, 252), rgb(254, 199, 255));
     padding: 10px;
     border: 2px solid rgb(189, 135, 243);
     border-radius: 10px;
@@ -223,18 +234,24 @@ textarea{
 } 
 
 button:hover{
+    background-color: rgb(250, 222, 247);
+    color: black;
+}
+
+button:active{
     background-color: rgb(253, 253, 253);
     color: black;
 }
 
 #logos{
-    background-color: rgb(255, 170, 219);
+    /* background-color: rgb(80, 252, 255); */
+    background-image: radial-gradient(rgb(207, 255, 252), rgb(254, 199, 255));
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 12px;
-    border: 3px solid rgb(249, 61, 117);
+    border: 3px solid rgb(240, 102, 194);
     border-radius: 10px
 }
 
@@ -243,6 +260,7 @@ button:hover{
     justify-content: space-around;
     /* border: 1px solid red; */
     width: 340px;
+    padding-top: 3.5px;
 }
 
 input:focus {
@@ -252,12 +270,16 @@ input:focus {
  
 }
 
+#switch{
+    display: none;
+    background-color: rgb(127, 185, 255);
+}
 @media (max-width : 700px){
   .container-edit{
     background-image: radial-gradient(rgb(255, 179, 179), rgb(193, 232, 255));
     width:100%;
   }
-
+  
   .container-edit input, select{
     border-radius: 8px;
     height: 30px;
@@ -269,4 +291,22 @@ input:focus {
     border: 1.5px solid rgb(0, 188, 235);
     border-radius: 10px;
 } 
+#logos{
+    background-image: radial-gradient(rgb(255, 179, 179), rgb(193, 232, 255));
+}
+
+
+/*print part & mobile responsive*/
+.container-preview{
+  
+  transform: scale(0.45);
+  translate: 0 -250px;
+  /* background-color: red; */
+}
+
+#switch{
+    display: block;
+    background-color: red;
+}
+
 }

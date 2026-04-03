@@ -218,11 +218,20 @@ button{
 }
 
 .container-edit h4{
-    background-color: rgb(255, 4, 146);
+    margin-top: 6px;
+    display: flex;
+    background-color: rgba(255, 6, 147, 0.084);
+    /* backdrop-filter: blur(5px); */
     border-radius: 10px;
     border: 2px solid rgb(255, 207, 244);
-    color: rgb(255, 255, 255);
-    padding: 10px;
+    color: rgb(172, 0, 149);
+    font-size: 16px;
+    padding: 4px;
+    height: 60px;
+    
+}
+.container-edit video{
+    translate: 0 -20px;
 }
 
 textarea{

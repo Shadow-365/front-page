@@ -347,4 +347,9 @@ input[type="file"]::file-selector-button:active{
     background-color: red;
 }
 
+.container-edit h4{
+    font-size: 12px;
+    
+}
+
 }

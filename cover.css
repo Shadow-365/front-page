@@ -232,7 +232,7 @@ button{
     
 }
 .container-edit video{
-    translate: 0 -20px;
+    translate: 0 -16px;
 }
 
 textarea{
@@ -349,7 +349,7 @@ input[type="file"]::file-selector-button:active{
 }
 
 .container-edit h4{
-    font-size: 12px;
+    font-size: 14px;
     
 }
 

@@ -236,11 +236,16 @@ textarea{
 button:hover{
     background-color: rgb(250, 222, 247);
     color: black;
+    transform: scale(0.9);
+    transition: 0.8s ease;
+    cursor: pointer;
 }
 
 button:active{
     background-color: rgb(253, 253, 253);
     color: black;
+    transform: scale(0.9);
+    transition: 0.8s;
 }
 
 #logos{
@@ -275,7 +280,29 @@ input:focus {
     background-color: rgb(127, 185, 255);
 }
 
-/*mobile devices......*/
+/*Select file*/
+input[type="file"]::file-selector-button{
+
+   height: 30px;
+   background-color: rgb(255, 35, 145);
+   border: 1px solid rgb(255, 170, 222);
+   color: white;
+   border-radius: 7px;
+   cursor: pointer;
+}
+
+input[type="file"]::file-selector-button:hover{
+   background-color: rgb(24, 151, 119);
+   border: 1px solid rgb(229, 251, 255);
+  
+}
+
+input[type="file"]::file-selector-button:active{
+   background-color: rgb(27, 244, 255);
+   border: 1px solid rgb(229, 251, 255);
+}
+
+
 @media (max-width : 700px){
   .container-edit{
     background-image: radial-gradient(rgb(255, 179, 179), rgb(193, 232, 255));

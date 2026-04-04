@@ -257,16 +257,21 @@ button:active{
     transform: scale(0.9);
     transition: 0.8s;
 }
+/* Logo text change*/
+#chang-log{     
+    font-style: italic;
+    font-size: 14px;
+}
 
 #logos{
-    /* background-color: rgb(80, 252, 255); */
-    background-image: radial-gradient(rgb(207, 255, 252), rgb(254, 199, 255));
+    background-color: rgba(255, 6, 147, 0.084);
+    /* background-image: radial-gradient(rgba(207, 255, 252, 0.09), rgba(254, 199, 255, 0.292)); */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 12px;
-    border: 3px solid rgb(240, 102, 194);
+    border: 2px solid rgba(255, 102, 204, 0.761);
     border-radius: 10px
 }
 
@@ -289,6 +294,8 @@ input:focus {
     display: none;
     background-color: rgb(127, 185, 255);
 }
+
+
 
 /*Select file*/
 input[type="file"]::file-selector-button{
@@ -313,6 +320,76 @@ input[type="file"]::file-selector-button:active{
 }
 
 
+/*Dev box log*/
+#ver{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 0;
+}
+#verc{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    color: white;
+    margin-top: 3px;
+    background-color: rgba(21, 255, 87, 0.349);
+    border: 0.5px solid rgba(0, 255, 191, 0.769);
+    padding: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#verc:hover{
+    background-color: rgba(245, 243, 245, 0.632);
+    color: rgb(255, 0, 242);
+}
+
+#dev-container{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 231, 249, 0.336);
+    position: fixed;
+    height: 100%;
+    width:100%;
+
+}
+
+#dev-container div{
+  
+    background-color: rgba(247, 246, 247, 0.312);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgb(255, 31, 68);
+    box-shadow: 2px 2px 100px#80016f;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+
+#dev img{
+    height: 110px;
+    width: 100px;
+}
+
+
+#cancel{
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    
+}
+#cancel:hover{
+    transform: scale(0.8);
+    transition: 0.4s ease;
+}
+
+
+
+/*------------------------------------------------------ */
+
+
+
 @media (max-width : 700px){
   .container-edit{
     background-image: radial-gradient(rgb(255, 179, 179), rgb(193, 232, 255));
@@ -330,8 +407,13 @@ input[type="file"]::file-selector-button:active{
     border: 1.5px solid rgb(0, 188, 235);
     border-radius: 10px;
 } 
+
+#chang-log{
+     font-size: 12px;
+}
 #logos{
-    background-image: radial-gradient(rgb(255, 179, 179), rgb(193, 232, 255));
+    /* background-image: radial-gradient(rgba(255, 179, 179, 0.724), rgba(193, 232, 255, 0.775)); */
+    width: 90%;
 }
 
 
@@ -351,6 +433,10 @@ input[type="file"]::file-selector-button:active{
 .container-edit h4{
     font-size: 14px;
     
+}
+
+#dev-container div{
+    margin: 13px;
 }
 
 }

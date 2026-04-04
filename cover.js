@@ -77,6 +77,31 @@ clgg.addEventListener("change", () =>{
     document.getElementById("cllg-name").value=clgg.value;
 })
 
+
+
+//Show dev log
+function toggleVer(){
+    const ui = document.getElementById("dev-container");
+    // console.log("hello",ui.style)
+    if(ui.style.display==="none" || ui.style.display===""){
+        ui.style.display="flex";
+    }else{
+        ui.style.display="none"
+    }
+}
+
+function cancell(){
+    const ui = document.getElementById("dev-container");
+    // console.log("hello",ui.style)
+    if(ui.style.display!="none" || ui.style.display!=""){
+        ui.style.display="none";
+    }
+   
+}
+
+
+
+
 function savepdf(){
    //const pdf=document.getElementById("a4");
     const scaler=document.querySelector(".container-preview");
@@ -115,4 +140,3 @@ html2pdf().set({
 
 
 }
-

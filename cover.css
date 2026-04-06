@@ -53,6 +53,9 @@ img{
     height: 100%;
 }
 
+#p-cllg{
+    margin-bottom: 8px;
+}
 
 table, th, td{
 
@@ -181,6 +184,7 @@ th h1{
 
 /*Conatainer edit code */
 #cover-image{
+
     height: 100px;
     width: 100px;
 }

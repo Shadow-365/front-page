@@ -10,6 +10,7 @@ inputimg.onchange = function(){
 }
 
 
+
 //next 
 function next(){
     const edit = document.querySelector(".container-edit");
@@ -35,7 +36,7 @@ function next(){
     let subby = document.getElementById("submit-by").value;
     let subto = document.getElementById("submit-to").value;
     
-    console.log("subby : ", subby)
+    // console.log("subby : ", subby)
 
     //value to set
     document.getElementById("p-cllg").textContent = clg;
@@ -57,7 +58,7 @@ function edit(){
     const prw = document.querySelector(".container-preview");
     const btnhold = document.querySelector(".btn-hold");
     const nxtbtn = document.getElementById("nxt");
-  console.log(prw);
+//   console.log(prw);
     // console.log(edit); hide/unhide
     edit.style.display="flex";
     btnhold.style.display="none";
@@ -66,17 +67,51 @@ function edit(){
 
 
 }
-//get cllg  name from select element
-let clgg = document.getElementById("clg");
-document.getElementById("cllg-name").value=clgg.value;
-console.log(clgg.value)
 
-//get value
+//get cllg  name from select element
+const clgg = document.getElementById("clg");
+//default collge
+const clgname = document.getElementById("cllg-name");
+clgname.value="Darrang College, Tezpur"
+
+//image
 
 clgg.addEventListener("change", () =>{
-    document.getElementById("cllg-name").value=clgg.value;
+const value = parseInt(clgg.value);
+// console.log("Value : ",value)
+    switch(value){
+        case 1:
+            clgname.value="Darrang College, Tezpur"
+            img.src="darrang.png";
+            break;
+        
+        case 2:
+            clgname.value="Tezpur College, Tezpur";
+            img.src="tezpur-cllg.png";
+            break;
+        
+        case 3:
+            clgname.value="Tezpur University, Tezpur";
+            img.src="tezpur-univer.png";
+            break;
+
+        case 4:
+            clgname.value="Tezpur Law College, Tezpur";
+            img.src="tezpur-law.png";
+            break;
+
+        case 5:
+            clgname.value="St. Mary's Senior Secondary School";
+            break;
+        
+        case 6:
+            clgname.value="Tezpur Gurukul";
+            break;
+    }
+   
 })
 
+ // document.getElementById("cllg-name").value=clgg.value;
 
 
 //Show dev log
@@ -107,10 +142,10 @@ function savepdf(){
     const scaler=document.querySelector(".container-preview");
     const swth =document.getElementById("switch");
     // scale.style.translate="translateY(250px)";
-    console.log(window.getComputedStyle(swth).display);
+    // console.log(window.getComputedStyle(swth).display);
 
    if(window.getComputedStyle(swth).display=="block"){
-   console.log("Executed");
+//    console.log("Executed");
    scaler.style.transform="translateY(250px) scale(1)";
    }
 
@@ -127,7 +162,7 @@ html2pdf().set({
 .then(() => {
 
  if(window.getComputedStyle(swth).display=="block"){
-   console.log("Executed block 2");
+//    console.log("Executed block 2");
    scaler.style.transform="translateY(0) scale(0.45)";
    
 //    console.log("hdjh",window.getComputedStyle(scaler).translate)

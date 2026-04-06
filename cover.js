@@ -1,4 +1,3 @@
-
 //get image
 let inputimg=document.getElementById("input-file");
 let img=document.getElementById("cover-image");

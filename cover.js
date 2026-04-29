@@ -10,6 +10,28 @@ inputimg.onchange = function(){
 
 
 
+
+//move more design up and down
+const morebtn = document.getElementById("more-down");
+const more = document.getElementById("more");
+
+more.style.display="flex";
+//display more for few seconds
+setTimeout(()=>{
+    more.style.display="none";
+},1500);
+
+//toggle display
+morebtn.addEventListener("click", ()=>{
+    if(more.style.display=="flex"){
+        more.style.display="none";
+        console.log("Hello");
+    }else{
+        more.style.display="flex";
+         console.log(more.style.display);
+    }
+})
+
 //next 
 function next(){
     const edit = document.querySelector(".container-edit");

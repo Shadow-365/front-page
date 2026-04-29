@@ -12,6 +12,9 @@ img{
     width: 35%;
 }
 
+
+
+
 /* .container-edit{
     display: none;
 } */
@@ -220,9 +223,11 @@ button{
     height: 35px;
     width: 150px;
 }
+/*Welcome to front page designer*/
 
 .container-edit h4{
     margin-top: 6px;
+    margin-bottom: 5px;
     display: flex;
     align-items: center;
     background-color: rgba(255, 6, 147, 0.084);
@@ -234,6 +239,35 @@ button{
     padding: 4px;
     height: 60px;
     
+}
+
+/*more design and privacy policy*/
+#more{
+    display: none;
+    /* border: 1px solid black; */
+    /* background-color: rgba(0, 95, 62, 0.283); */
+    justify-content: space-around;
+    border-radius: 6px;
+    width: 70%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#more button{
+    width: 13vw;
+   
+    
+}
+#mre1{
+    background-color: rgba(11, 236, 131, 0.922);
+    border: 0.8px solid rgb(5, 196, 43);
+    
+
+}
+#more-down{
+    height: 50px;
+    width:50px;
+    margin-bottom: 12px;
 }
 .container-edit video{
     translate: 0 -16px;
@@ -395,6 +429,32 @@ input[type="file"]::file-selector-button:active{
 
 
 @media (max-width : 700px){
+
+    /*more options*/
+    #more{
+    display: none;
+    /* border: 1px solid black; */
+    /* background-color: rgba(0, 95, 62, 0.283); */
+    justify-content: space-around;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    transition: 0.5s ease;
+    }
+    #more-down{
+    height: 30px;
+    width:45px;
+    margin-bottom: 0;
+  
+    }
+    #more button{
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+        padding: 1px;
+    }
+
   .container-edit{
     background-image: radial-gradient(rgb(255, 179, 179), rgb(193, 232, 255));
     width:100%;

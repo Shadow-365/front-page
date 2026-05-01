@@ -48,10 +48,18 @@
                      <a href="https://drive.google.com/file/d/18OHlvn87rxN3y202JHBCDO_nxj4tHaSs/view?usp=drive_link">Download</a>
                 </li>
             </ul>
-       
+       <div class="comment">
+            <ul id="com-container">
+                <li>Loading...</li>
+            </ul>
+            <div class="send">
+            <input type="text" placeholder="Enter Anonymous Comment" id="message">
+            <button id="sen">Send!</button>
+            </div>
+       </div>
   
 
-    <P id="cont">Don't get your desired front page designs contact <a href="mailto:productivelearning6@gmail.com" id="aa">productivelearning6@gmail.com</a> </P>
+    <P id="cont">Don't get your desired front page designs contact<a href="mailto:productivelearning6@gmail.com" id="aa">productivelearning6@gmail.com</a> </P>
 </body>
 <style>
     h3{
@@ -120,6 +128,42 @@
         color:white;
     }
 
+    /*Comment Design*/
+    #com-container{  /*Cover*/
+        display: flex;
+        flex-direction: row;
+        max-height: 500px;
+   
+        overflow: scroll;
+    }
+
+    #com-container p{
+        padding: 0;
+        border: 1px solid rgb(91, 138, 154)k;
+        font-size: 11px;
+
+    }
+    .comment{
+        border: 1px solid rgb(3, 134, 205);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .send{
+        display: flex;
+        justify-content: center;
+    }
+/*List comeent design display*/
+    .msg-item{
+        background-image: none;
+        background-color: rgb(198, 247, 231);
+        font-weight:300;
+        width: 90%;
+       
+    }
+
+
+
     @media (max-width: 680px){
         body{
             background-color: rgb(200, 255, 185);
@@ -165,6 +209,109 @@
             background-color: azure;
         }
 
+         #com-container{  /*Cover*/
+        display: flex;
+        flex-direction: row;
+        max-height: 500px;
+        max-width: 500px;
+        overflow: scroll;
+    }
     }
 </style>
+
+    <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
+//   import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-analytics.js";
+    import { getFirestore, addDoc, collection, query, orderBy, onSnapshot } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDcHHOtkU-ZlSqVrhYR6VuDNAaVqY8oWKI",
+    authDomain: "front-page-e1691.firebaseapp.com",
+    projectId: "front-page-e1691",
+    storageBucket: "front-page-e1691.firebasestorage.app",
+    messagingSenderId: "438434658832",
+    appId: "1:438434658832:web:df72424de02ac7870d2895",
+    measurementId: "G-LCV2X3BNTY"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+//   const analytics = getAnalytics(app);
+  const db= getFirestore(app);
+  
+//   function send(){
+//     console.log("Hello");
+//     const msg=document.getElementById("message").value;
+//     const msgList= document.getElementById("com-container");
+
+//     //message set
+//      lis=document.createElement("li");
+//      lis.textContent=msg;
+//      msgList.appendChild(lis);
+
+//   }
+
+//Send message
+  const btn=document.getElementById("sen");
+  const msgList=document.getElementById("com-container");
+
+  btn.addEventListener("click", async ()=>{
+    const msg=document.getElementById("message").value;
+   
+   if(msg !== ""){
+         try{
+        await addDoc(collection(db,"messages"),{
+            message : msg,
+            time: new Date()
+        });
+        }catch(error){
+            console.log("Error : ", error);
+         };
+             document.getElementById("message").value="";
+
+        }else{
+            alert("Message Can't be Empty");
+        }
+
+   
+  });
+ 
+
+  //Display Message
+
+  const q = query(collection(db, "messages"), orderBy("time"));
+  
+  onSnapshot(q,(snapshot)=>{
+  msgList.innerHTML = "";
+
+  snapshot.forEach((doc)=>{
+    let data = doc.data();
+
+    let li = document.createElement("li");
+    let timez = document.createElement("p");
+
+    // convert + format
+    let date = data.time.toDate();
+    let formattedTime = date.toLocaleString("en-IN", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true
+    });
+
+    li.classList.add("msg-item");
+    timez.classList.add("time");
+
+    // text
+    li.textContent = data.message;
+    timez.textContent = formattedTime; 
+
+    msgList.appendChild(li);
+    li.appendChild(timez);
+  });
+});
+
+</script>
 </html>

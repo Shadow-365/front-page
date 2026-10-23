@@ -335,14 +335,14 @@ input[type="file"]::file-selector-button:active{
 #hold-footer button{
     background-color: rgb(151, 82, 235);
     border-color:rgb(154, 106, 167);
-   
+    height: 26px;
 }
 
 #hold-footer{
     padding: 2px;
-    background-color:rgb(0, 188, 235);
+    background-color:rgba(0, 188, 235, 0.205);
     position: fixed;
-    margin-top: 90vh;
+    margin-top: 6vh;
     display: none;
 }
 

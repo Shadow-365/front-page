@@ -47,6 +47,9 @@ function next(){
     bhold.style.display="flex";
     nxtbtn.style.display="none";
    
+
+    document.getElementById("hold-footer").style.display="inline-block";
+    // document.querySelector(".fonttA").style.position="inline-block";
     
     
     
@@ -87,6 +90,7 @@ function edit(){
     nxtbtn.style.display="block";
     prw.style.display="none";
 
+      document.getElementById("hold-footer").style.display="none";
 
 }
 
@@ -261,6 +265,13 @@ l3.addEventListener("click", ()=>{
 
 
 
+//Increae and decrease font size
+let fontScale = 1; // Initial font scale
+function changeFont(increment) {
+    fontScale += increment * 0.1;
+    fontScale = Math.max(0.5, Math.min(1.5, fontScale)); // Keep it within reasonable bounds
+    document.querySelector(".container-preview").style.setProperty('--font-scale', fontScale);
+}
 
 //Show dev log
 function toggleVer(){

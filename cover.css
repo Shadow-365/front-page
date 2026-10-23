@@ -188,11 +188,13 @@ button:active{
 
 .btn-hold{
     display: none;
-    justify-content: space-around;
+    justify-content: space-between;
     /* border: 1px solid red; */
     width: 340px;
     padding-top: 3.5px;
 }
+
+
 
 input:focus {
   outline: none;              /* remove default outline */
@@ -328,6 +330,26 @@ input[type="file"]::file-selector-button:active{
     box-shadow: 10px 10px 100px rgb(86, 0, 53);
 }
 
+
+
+#hold-footer button{
+    background-color: rgb(151, 82, 235);
+    border-color:rgb(154, 106, 167);
+   
+}
+
+#hold-footer{
+    padding: 2px;
+    background-color:rgb(0, 188, 235);
+    position: fixed;
+    margin-top: 90vh;
+    display: none;
+}
+
+
+.container-preview{
+    
+}
 /* .submit_img img:active{
     transform: scale(0.9);
     transition: 0.4s ease-in-out;

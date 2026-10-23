@@ -135,8 +135,13 @@ Date:  06-05-2026
 
     <div class="btn-hold">
         <button onclick="edit()" id="edt"><< Edit</button>
-        <button type="button" onclick="savepdf()" id="dwn">Download as PDF</button>
+
+
+          <button type="button" onclick="savepdf()" id="dwn">Download PDF</button>
+
     </div>
+        
+    
  
  
  <div class="container-preview" id="a4">
@@ -208,7 +213,8 @@ Department of Geogrphy
   
 
    
-    
+
+
     <div id="dev-container">
     <div>
       <center>
@@ -243,7 +249,10 @@ Department of Geogrphy
     
    <div id="switch"></div>
 
-
+<div id="hold-footer">
+        <button onClick="changeFont(1)" class="fontA">Increase font (A+)</button>
+        <button onClick="changeFont(-1)" class="fontA">Decrease font (A-)</button>
+</div>
    <!-- fire base using content delivery network CDN-->
     <script type="module" src="analyse.js">
  

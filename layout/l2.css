@@ -110,6 +110,7 @@ td pre{
     font-size: 22px;
     white-space: pre-wrap;   
     word-wrap: break-word;
+
   
 }
 
@@ -176,6 +177,12 @@ th h1{
 
 
 @media (max-width : 700px){
-    
+    #prew-by{
+        font-size: 20px;
+    }
+
+    #prew-to{
+        font-size: 20px;
+    }
    
 }

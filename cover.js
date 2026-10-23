@@ -1,5 +1,6 @@
 //get image
 let inputimg=document.getElementById("input-file");
+console.log(inputimg)
 let img=document.getElementById("cover-image");
 
 
@@ -93,7 +94,7 @@ function edit(){
 const clgg = document.getElementById("clg");
 //default collge
 const clgname = document.getElementById("cllg-name");
-clgname.value="Darrang College, Tezpur"
+clgname.value="Darrang College (Autonomous), Tezpur"
 
 //image
 
@@ -102,23 +103,23 @@ const value = parseInt(clgg.value);
 // console.log("Value : ",value)
     switch(value){
         case 1:
-            clgname.value="Darrang College, Tezpur"
-            img.src="darrang.png";
+            clgname.value="Darrang College (Autonomous), Tezpur"
+            img.src="pictures/logos/darrang.png";
             break;
         
         case 2:
             clgname.value="Tezpur College, Tezpur";
-            img.src="tezpur-cllg.png";
+            img.src="pictures/logos/tezpur-cllg.png";
             break;
         
         case 3:
             clgname.value="Tezpur University, Tezpur";
-            img.src="tezpur-univer.png";
+            img.src="pictures/logos/tezpur-univer.png";
             break;
 
         case 4:
             clgname.value="Tezpur Law College, Tezpur";
-            img.src="tezpur-law.png";
+            img.src="pictures/logos/tezpur-law.png";
             break;
 
         case 5:
@@ -133,6 +134,132 @@ const value = parseInt(clgg.value);
 })
 
  // document.getElementById("cllg-name").value=clgg.value;
+
+
+
+
+//Align and unalign Colon
+const textarea = document.getElementById("submit-by");
+const checkAlign = document.getElementById("toggleCheck");
+let originalText = "";
+
+if(checkAlign.checked){
+    alignColon();
+}
+
+checkAlign.addEventListener("change", function(){
+
+
+    if(this.checked){
+        alignColon();
+    }else{
+        unalignColon();
+    }
+
+});
+
+  function alignColon(){
+    console.log("Check!")
+            originalText = textarea.value;
+
+    const lines = textarea.value.split("\n");
+
+    // Find the longest label before the colon
+    const maxLength = Math.max(
+      ...lines.map(line => {
+        const index = line.indexOf(":");
+        return index === -1
+          ? 0
+          : line.slice(0, index).trim().length;
+      })
+    );
+
+    textarea.value = lines.map(line => {
+      const index = line.indexOf(":");
+
+      if (index === -1) return line;
+
+      const label = line.slice(0, index).trim();
+      const value = line.slice(index + 1).trim();
+
+      return label.padEnd(maxLength + 1) + ": " + value;
+    }).join("\n");
+  }
+
+  function unalignColon() {
+    if(originalText !== ""){
+        textarea.value = originalText;
+    }
+ }
+  
+
+
+
+
+//Select Layout Logic
+const l1 = document.getElementById("lyt1");
+const l2 = document.getElementById("lyt2");
+const l3 = document.getElementById("lyt3");
+const layout = document.getElementById("styleLayout");
+
+l1.addEventListener("click", ()=>{
+  
+    layout.href = "layout/l1.css"
+
+    l1.style.filter = "grayscale(0%)";
+    //  l1.style.filter = "invert(100%)";
+
+    l1.style.transform = "scale(1.05)";
+    l2.style.transform = "scale(1.0)";
+    l3.style.transform = "scale(1.0)";
+
+    l1.style.boxShadow = "10px 10px 20px green";
+    l2.style.boxShadow = "none";
+    l3.style.boxShadow = "none";
+
+   
+})
+
+l2.addEventListener("click", ()=>{
+   
+    layout.href="layout/l2.css"
+
+    l2.style.transform = "scale(1.05)";
+    l1.style.transform = "scale(1.0)";
+    l3.style.transform = "scale(1.0)";
+    
+
+    l2.style.boxShadow = "1px 3px 25px red";
+    l1.style.boxShadow = "none";
+    l3.style.boxShadow = "none";
+    
+
+
+    //Adjust the Space of the Submitted by:
+
+
+
+})
+
+l3.addEventListener("click", ()=>{
+    
+    unalignColon();
+    
+    document.getElementById("toggleCheck").checked = false;
+
+    layout.href = "layout/l3.css"
+
+    l3.style.transform = "scale(1.05)";
+    l1.style.transform = "scale(1.0)";
+    l2.style.transform = "scale(1.0)";
+    
+    l3.style.boxShadow = "-3px 10px 20px green";
+    l2.style.boxShadow = "none";
+    l1.style.boxShadow = "none";
+    console.log("Click");
+})
+
+
 
 
 //Show dev log

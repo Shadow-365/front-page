@@ -5,6 +5,8 @@ body{
     font-size: 16px;
     flex-direction: column;
     background-image: radial-gradient(rgb(246, 223, 223), rgb(208, 208, 238));
+    
+    
 }
 
 img{
@@ -18,172 +20,6 @@ img{
 /* .container-edit{
     display: none;
 } */
-
-.container-preview{
-  /* width: min(95vw, 800px);   responsive width
-  aspect-ratio: 210 / 297;   A4 shape */
-   
-  /* margin: 20px auto; */
-  padding: 45px;
-  background: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  box-sizing: border-box;
-  display: none;
-  /* border: 2px solid red; */
-  width: 210mm;   
-  height: 296.8mm;
-
-  /* transform: scale(1);
-  translate: 0 0; */
-
-  
-}
-
-/* download */
-/* #a4{
-  /* border: 3px solid red; */
-  /*794px */
-  /* width: 210mm;   785px A4 width  210mm */
-  /* height: 297mm; A4 1123px height 297mm */
-  /*1123px */
-
-  /* width: 210mm;   
-  height: 297mm; 
-}*/
-
-.in-preview{
-    border: 2.6px solid rgb(0, 0, 0);
-    height: 100%;
-}
-
-#p-cllg{
-    margin-bottom: 8px;
-}
-
-table, th, td{
-
-    
-    width: 100%; /*100%*/
-    max-width: 800px; /*800px*/
-    
-     /* border: 1px solid black; */
-     padding-top: 0px;
-
-    
-    padding: 0px;
-}
-
-th, td{
-   
-   border-spacing: 0px;
-   padding: 0;
-
-}
-table{
-    /* border: 2px solid black; */
-    overflow: hidden;
-   
-    border-collapse: collapse;
-    text-align: center;
-    font-size: 22px;
-   
-}
-
-/* .space{
-    background-color: aqua;
-    width: 100%;
-    height: 200px;
-    
-} */
-
-td pre{
-    line-height: 2;
-    text-align: left;
-   
-}
-/* submitted to top*/
-#sb{
-   margin-top: 0;
-   text-align: left;
-   /* border: 1px solid black; */
-   margin-bottom: 1px;
-   margin-left: 22px;
-   font-weight: 550;
-   font-size: 28px;
-}
-
-#prew-by{
-    padding: 0;
-    margin-left: 22px;
-    /* border: 1px solid rgb(191, 0, 0); */
-    white-space: pre-wrap;
-    max-width: 95%;
-    word-wrap: break-word;
-    margin-top: 1px;
-    margin-bottom: 1px;
-    line-height: 1.6;
-    font-size: 26px;
-}
-
-/* container Seperate div for sub to */
-.sto{
-  
-    /* border: 2px solid black;
-    background-color: rgb(166, 243, 243); */
-    display: flex;
-    flex-direction: column;
-    align-items:flex-end;
-    justify-content: center;
-    padding-right: 7px;
-    margin-top: 25px;
-
-}
-.sto p{
-    /* margin-top: 20px; */
-    /* border: 1px solid black; */
-    padding-right: 60px;
-    text-align: left;
-    margin: 0;
-    width: 300px;
-    margin-bottom: 5px;
-    font-weight: 550;
-    font-size: 28px;
-}
-#st{
-    margin-right: 30px;
-} 
-
-#prew-to{
-    margin-top: 0;
-    /* border: 1px solid black;  */
-    width: 390px;
-    line-height: 1.6;
-    font-size: 26px;
-    white-space: pre-wrap;   
-}
-
-/* td h2{
-    line-height: 5px;
-}  */
-
-#p-assign{
-    /* border: 1px solid black; */
-    margin-top: 10px;
-    margin-bottom: 14px;
-    font-size: 38px;
-}
-
-#p-subs{
-   margin-top: 0;
-   /* border: 1px solid black; */
-   height: 80px;
-   font-size: 28px;
-   
-}
-
-th h1{
-    font-size: 50px;
-}
 
 
 
@@ -206,6 +42,7 @@ th h1{
     padding: 10px;
     border: 2px solid rgb(189, 135, 243);
     border-radius: 10px;
+    
 }
 
 
@@ -276,6 +113,39 @@ button{
     translate: 0 -16px;
 }
 
+/*Align the check colom*/
+.align-container{
+    background-color: rgba(127, 255, 212, 0.212);
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+
+.align-container label{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+label p{
+    /* border: 2px solid black; */
+    color: #ff0ab1;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0;
+    /* padding-left: 10vw; */
+}
+
+#toggleCheck{
+    width:20px;
+    height: 20px;
+}
+
+/*End of the Align Check Column*/
 textarea{
     width: 30vw;
     resize: none;
@@ -426,6 +296,44 @@ input[type="file"]::file-selector-button:active{
 }
 
 
+/*Select submission style*/
+.layout_container{
+    background-color: rgba(119, 255, 185, 0.292);
+    border: 1px solid green;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+
+}
+.layout_img{
+    background-color: #df9fbd;
+    display: flex;
+    
+    justify-content: space-between;
+
+}
+
+.submit_img img{
+    width: 20%;
+    height: 30%;
+    margin-right: 10px;
+    /* filter: grayscale(80%) */
+}
+
+/* Layout on Click */
+.submit_img img:hover{
+    transform: scale(1.05);
+    transition: 0.4s ease-in-out;
+    filter: grayscale(0%);
+    box-shadow: 10px 10px 100px rgb(86, 0, 53);
+}
+
+/* .submit_img img:active{
+    transform: scale(0.9);
+    transition: 0.4s ease-in-out;
+    box-shadow: 10px 10px 100px rgb(0, 86, 40);
+} */
+
 
 /*------------------------------------------------------ */
 
@@ -507,3 +415,4 @@ input[type="file"]::file-selector-button:active{
 }
 
 }
+ 

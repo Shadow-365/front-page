@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Front page maker</title>
     <link rel="stylesheet" href="cover.css">
-    
+    <link id="styleLayout" rel="stylesheet" href="layout/l1.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
 
     <script src="cover.js" defer></script>
@@ -33,7 +34,7 @@
         </label>  
       
         <select id="clg">
-          <option value="1">Darrang College, Tezpur</option>
+          <option value="1">Darrang College (Autonomous), Tezpur</option>
           <option value="2">Tezpur College, Tezpur</option> 
           <option value="3">Tezpur University, Tezpur</option> 
           <option value="4">Tezpur Law College, Tezpur</option>        
@@ -48,14 +49,14 @@
         <!-- <h5 id="cllg-name"></h5> -->
          <br>
          <div id="logos">
-            <img src="darrang.png" id="cover-image"> <br>
+            <img src="pictures/logos/darrang.png" id="cover-image"> <br>
             <label for="input-file">
                 <p id="chang-log">Change Logo (Selected logo by default)</p>
             </label>
             <input type="file" id="input-file"> <br>
           </div>
         <label for="assign-name">
-        Assignment name:
+        Assignment/Subject name:
          </label>
         <input type="text" placeholder="Enter Assignment" value="Assignment on Python Libraries" id="assign-name"><br>
        
@@ -66,17 +67,31 @@
         <input type="text" placeholder="Enter Subject/topic" value="Topic : Explain types of ..." id="subs"><br>
         
         <br>
-        <label for="submit-by">
+       
+
+        <div class="align-container">
+            
+             <label for="submit-by">
             Enter submitted by:
-        </label>
+            </label>
+            
+             <label for="toggleCheck">
+             <p>Align Colon</p><input type="checkbox" id="toggleCheck" checked>
+             
+
+            </label>
+         
+        </div>
+
 
        <div class="sub-by">
+         
         <textarea id="submit-by">
-Name         :    XYZ
-Class        :    BCA 4th Sem
-UID          :    24BC0005
-GU Roll.     :    UT-241-225-0000
-Subject      :    AEC</textarea>
+Name : XYZ
+Class : BCA 4th Sem
+UID : 24BC0005
+GU Roll. : UT-241-225-0000
+Subject : AEC</textarea>
         </label>
         </div>
 
@@ -88,12 +103,35 @@ Subject      :    AEC</textarea>
 Department of English,
 Date:  06-05-2026
             </textarea>
-        </div><br>
-        <p id="ver">Version 3.0(Delta):Long text may still break structure</p><p id="verc" onclick="toggleVer()">See log...</p>
+        </div>
+        
+        <!-- Image Slider Selection -->
+      
+        <div class="layout_container">
+            <h3>Select Layout Style</h3>
+            <div class="submit_img">
+                    <img src="layout\design1.jpeg" id="lyt1">
+                    <img src="layout\design2.jpeg" id="lyt2">
+                    <img src="layout\design3.jpeg" id="lyt3">
+            </div>
+        </div>
+        
+        <br>
+        <p id="ver">Version 3.5(Delta+) : Different layout available</p>
+        
+        <p id="verc" onclick="toggleVer()">See log...</p>
 
         <button onclick="next()" id="nxt">NEXT >></button>
         
     </div>
+
+
+
+
+
+    <!-- Preview Page -->
+
+
 
     <div class="btn-hold">
         <button onclick="edit()" id="edt"><< Edit</button>
@@ -108,12 +146,22 @@ Date:  06-05-2026
       
 
         <table>
+           
+
             <tr>
-                <th><h1 id="p-cllg">Darrang College</h1></th>
+                <th>
+                     <div id="layout3-con">
+                        <h1 id="p-cllg">Darrang College</h1>
+                        <img src="darrang.png" id="p-image"> 
+                      </div>
+                </th>
+                
+                   
+     
+                 
             </tr>
-            <tr>
-                 <td><img src="darrang.png" id="p-image"> </td>
-            </tr>
+
+            
 
             <tr>
                  <td></rd><h2 id="p-assign">Assignment of MDC</h2></td>
@@ -126,44 +174,64 @@ Date:  06-05-2026
                <td><div class="space"></div>
                 </td>
             </tr>
-            <tr>
-                 <td>
-                    <p id="sb">Submitted by:</p>
-                <Pre id="prew-by">Name : Shadow</Pre>
-            </td>
-            </tr>
 
-            <tr>
-               
-               <td> <div class="sto">
+
+         <tr>
+         
+                <td>
+                 
+                <div id="hv-submit">
+                    <div id="con-stby">
+                    <p id="sb">Submitted by:</p>
+                    <Pre id="prew-by">Name : Shadow</Pre>
+                    </div>
+           
+
+              <div class="sto">
                  <p id="st">Submitted to:</p>
                 <pre id="prew-to">
 Submitted 
 Department of Geogrphy
-                    </pre></div></td>
-                
-            </tr>
+                    </pre>
+                    </div>
+                </div>
+
+
+                </td>
+          
+          
+          </tr>
 
         </table>
       </div>
     </div>
+  
 
+   
     
     <div id="dev-container">
     <div>
       <center>
+    <!-- <div>
     <b>Version 3.0 Update Details: </b><br>
     - Added new college logo Tezpur, law, college etc.<br>
     - UI improvement <br>
     - fixes struture and improvement <br> <br>
+    </div> -->
+
+    
+    <b>Version 3.5 Update Details: </b><br>
+    - Added 3 new layout design<br>
+    - Added align colon option for submitted by <br>
+    - fixes struture and overall improvement <br> <br>
     
 
     Idea & developed by: MP<br>
     Location: Tezpur, Assam, India <br>
     Developer contact <i>(bugs report, suggestion and all)</i>: <a href="mailto:productivelearning6@gmail.com">productivelearning6@gmail.com</a><br>
     <br>
-    Support the developer (Optional)<br>
-    <img src="scanner.jpeg" > <br>
+    <!-- Support the developer (Optional)<br>
+    <img src="scanner.jpeg" > <br> -->
    
     Thankyou for using! <br> <br>
   

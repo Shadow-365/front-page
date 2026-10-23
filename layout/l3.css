@@ -1,0 +1,222 @@
+.container-preview{
+
+  padding: 45px;
+  /* background: rgb(255, 101, 101); */
+    background-image: url(../pictures/layout_background/lyt-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-sizing: border-box;
+  display: none;
+  /* border: 2px solid red; */
+  width: 210mm;   
+  height: 296.8mm;
+  /* transform: scale(0.5);
+  translate: 0 -250px; */
+  /* transform: scale(1);
+  translate: 0 0; */
+
+  
+}
+
+.in-preview{
+    /* border: 2.6px solid rgb(0, 0, 0); */
+    height: 100%;
+    
+}
+
+
+
+table, th, td{
+
+    
+    width: 100%; /*100%*/
+    max-width: 800px; /*800px*/
+    
+     /* border: 1px solid black; */
+     padding-top: 0px;
+
+    
+    padding: 0px;
+}
+
+th, td{
+   
+   border-spacing: 0px;
+   padding: 0;
+
+}
+table, td, th{
+    
+    /* border: 2px solid rgb(234, 105, 105); */
+    overflow: hidden;
+   
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 22px;
+   
+}
+
+/* .space{
+    background-color: aqua;
+    width: 100%;
+    height: 200px;
+    
+} */
+
+td pre{
+    line-height: 6;
+    text-align: left;
+   
+}
+
+
+/*Change horizontal and vertical of submit*/
+#hv-submit{
+    padding: 0px;
+    /* background-color: rgb(227, 196, 255); */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   
+ 
+}
+
+/*Conatainer of submitted by*/
+#con-stby{
+    margin-top: 13px; 
+   /* border: 1px solid black; */
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+
+   
+  
+}
+
+
+/* submitted to top*/
+#sb{
+  font-size: 25px;
+    /* border: 1px solid black; */
+    margin: 0px;
+    margin-top: 0px;
+    font-weight: bold;
+    text-decoration: underline;
+    color:rgb(0, 139, 194);
+}
+
+#prew-by{
+    margin-top: 10px;
+    /* background-color: aqua; */
+    line-height: 1.6;
+    text-align: center;
+    font-size: 22px;
+    white-space: pre-wrap; 
+   
+  
+}
+
+/* container Seperate div for submitted to */
+.sto{
+
+    /* border: 1px solid black; */
+    margin: 0;
+    margin-left: 8px;
+   
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    margin-top: 52px;
+   
+}
+
+
+#st{
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin:0px;
+     color:rgb(0, 139, 194);
+    /* margin-right: 30px; */
+} 
+
+#prew-to{
+    margin: 8px;
+    /* border: 1px solid black;  */
+    line-height: 1.6;
+    text-align: center;
+    white-space: pre-wrap;   
+}
+
+/* td h2{
+    line-height: 5px;
+}  */
+
+#p-assign{
+    /* border: 1px solid black; */
+    height: 135px;
+    margin-top: 100px;
+    margin-bottom: 8px;
+    font-size: 34px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+
+    padding-right: 30px;
+    color: rgb(0, 118, 160);
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+#p-subs{
+   margin-top: 0;
+   margin-bottom: 0;
+   /* border: 1px solid black; */
+   height: 148px; 
+   font-size: 26px;
+   font-weight: 515;
+   text-align: right;
+   padding-right: 30px;
+   
+}
+
+th h1{
+    font-size: 50px;
+    
+}
+
+#layout3-con{
+    /* border: 1px solid black; */
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+
+#p-cllg{
+    /* border : 1px solid black; */
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 86px;
+    margin-bottom: 25px;
+    font-size: 30px;
+    order: 2;
+    width: 418px;
+    text-align: left;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+
+}
+
+#p-image{
+    width: 120px;
+    order: 1;
+}

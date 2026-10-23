@@ -41,8 +41,9 @@
 
 #p-cllg{
     margin-bottom: 26px;
-    font-size: 40px;
+    font-size: 30pt;
     font-weight: bolder;
+    background-color: rgb(138, 255, 255);
 }
 
 table, th, td{
@@ -171,11 +172,11 @@ th h1{
 }
 
 
-@media print{
+/* @media print{
     #p-cllg{
     background-color: rgb(138, 255, 255);
     margin-bottom: 26px;
     font-size: 40px;
     font-weight: bolder;
 }
-}
+} */

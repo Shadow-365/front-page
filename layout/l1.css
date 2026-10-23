@@ -100,7 +100,7 @@ td pre{
 #prew-by{
     padding: 0;
     margin-left: 22px;
-    /* border: 1px solid rgb(191, 0, 0); */
+    border: 1px solid rgb(191, 0, 0);
     white-space: pre-wrap;
     max-width: 95%;
     word-wrap: break-word;
@@ -168,4 +168,14 @@ td pre{
 
 th h1{
     font-size: 50px;
+}
+
+
+@media print{
+    #p-cllg{
+    background-color: rgb(138, 255, 255);
+    margin-bottom: 26px;
+    font-size: 40px;
+    font-weight: bolder;
+}
 }

@@ -82,10 +82,10 @@ td pre{
 /*Conatainer of submitted by*/
 #con-stby{
    border: 1px solid black;
-    width: 320px;
+    width: 322px;
     display: flex;
     flex-direction: column;
-    padding: 8px;
+    padding: 10px;
 
    
   
@@ -94,7 +94,7 @@ td pre{
 
 /* submitted to top*/
 #sb{
-  font-size: 25px;
+  font-size: px;
     /* border: 1px solid black; */
     padding: 0;
     margin: 0px;
@@ -103,11 +103,13 @@ td pre{
 }
 
 #prew-by{
+    /* border: 1px solid black; */
     margin-top: 8px;
     /* background-color: aqua; */
     line-height: 1.6;
     font-size: 22px;
     white-space: pre-wrap;   
+    word-wrap: break-word;
   
 }
 
@@ -116,9 +118,9 @@ td pre{
 
     border: 1px solid black;
     margin: 0;
-    margin-left: 8px;
+    margin-left: 6px;
    
-    width: 320px;
+    width: 322px;
     display: flex;
     flex-direction: column;
     padding: 8px;
@@ -170,4 +172,10 @@ th h1{
 #p-image{
     margin-top: 26px;
     width: 225px;
+}
+
+
+@media (max-width : 700px){
+    
+   
 }

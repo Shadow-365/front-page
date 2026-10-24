@@ -163,7 +163,6 @@ checkAlign.addEventListener("change", function(){
 });
 
   function alignColon(){
-    console.log("Check!")
             originalText = textarea.value;
 
     const lines = textarea.value.split("\n");
@@ -190,12 +189,21 @@ checkAlign.addEventListener("change", function(){
     }).join("\n");
   }
 
+
   function unalignColon() {
-    if(originalText !== ""){
-        textarea.value = originalText;
-    }
- }
+    const lines = textarea.value.split("\n");
+    textarea.value = lines.map(line => {
+      const index = line.indexOf(":");
+      if (index === -1) return line;
+
+      const label = line.slice(0, index).trim();
+      const value = line.slice(index + 1).trim();
+
+      return label + " : " + value;
+    }).join("\n");
+  }
   
+
 
 
 
@@ -208,7 +216,9 @@ const layout = document.getElementById("styleLayout");
 
 l1.addEventListener("click", ()=>{
   
-    layout.href = "layout/l1.css"
+    layout.href = "layout/l1.css";
+    checkAlign.checked = true;
+    alignColon();
 
     l1.style.filter = "grayscale(0%)";
     //  l1.style.filter = "invert(100%)";
@@ -245,11 +255,20 @@ l2.addEventListener("click", ()=>{
 
 })
 
+
+// function unalign2Colon() {
+
+//     }
+    
+
+
 l3.addEventListener("click", ()=>{
+
     
+    const lyt3s = document.getElementById("toggleCheck");
+
+    lyt3s.checked = false;
     unalignColon();
-    
-    document.getElementById("toggleCheck").checked = false;
 
     layout.href = "layout/l3.css"
 

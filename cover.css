@@ -474,7 +474,17 @@ input[type="file"]::file-selector-button:active{
     margin: 13px;
 }
 
-
+#front-index{
+    /* background-color: rgba(255, 255, 255, 0.767); */
+    width: 100%;
+    height: 40px;
+    overflow : hidden;
+    display: flex;
+}
+#front-index button{
+    margin-left: 4px;
+    margin-right: 4%;
+}
 
 }
  

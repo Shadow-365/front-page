@@ -32,12 +32,15 @@ img{
 }
 
 .container-edit{
+    width: 100vw;
+}
+.container-edit, #frontpage{
     border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 70%;
     background-image: radial-gradient(rgb(148, 229, 237), rgb(207, 255, 252), rgb(254, 199, 255));
     padding: 10px;
     border: 2px solid rgb(189, 135, 243);
@@ -45,6 +48,30 @@ img{
     
 }
 
+/* #frontpage{
+    display: none;
+} */
+
+/*Highlight frontpage switch button*/
+#si{
+    background-color: white;
+    color: black;
+    /* background-color: rgb(0, 179, 255); */
+    border-color: aqua;
+    
+}
+
+#ack-btn{
+     background-color: rgba(255, 255, 255, 0.838);
+    color: black;
+    /* background-color: rgb(0, 179, 255); */
+    border-color: aqua;
+    
+}
+
+#ack{
+    display: none;
+}
 
 .container-edit input, select{
     background-image: linear-gradient(to right,rgb(251, 233, 236), rgb(219, 251, 240), rgb(246, 246, 255));
@@ -53,6 +80,12 @@ img{
     height: 30px;
     width: 45vw;
 }
+
+
+#indexmaker{
+    display: none;
+}
+
 
 button{
     background-color: rgb(252, 62, 173);
@@ -188,6 +221,7 @@ button:active{
 
 .btn-hold{
     display: none;
+
     justify-content: space-between;
     /* border: 1px solid red; */
     width: 340px;
@@ -336,13 +370,16 @@ input[type="file"]::file-selector-button:active{
     background-color: rgb(151, 82, 235);
     border-color:rgb(154, 106, 167);
     height: 26px;
+    
 }
 
 #hold-footer{
-    padding: 2px;
-    background-color:rgba(0, 188, 235, 0.205);
-    position: fixed;
-    margin-top: 6vh;
+    margin: 0;
+    padding-top: 10px;
+   width:auto;
+    /* background-color:rgba(0, 188, 235, 0.605); */
+    /* position: fixed; */
+    
     display: none;
 }
 
@@ -388,7 +425,8 @@ input[type="file"]::file-selector-button:active{
         padding: 1px;
     }
 
-  .container-edit{
+  .container-edit, #frontpage{
+
     background-image: radial-gradient(rgb(255, 179, 179), rgb(193, 232, 255));
     width:100%;
   }

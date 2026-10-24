@@ -334,3 +334,65 @@ html2pdf().set({
 
 
 }
+
+
+//Switch between front and index
+const fbtn = document.getElementById('fp'); 
+const ibtn = document.getElementById('si'); 
+const abtn = document.getElementById('ack-btn');
+
+function showFrontPage(){
+    fbtn.style.backgroundColor = "rgb(252, 62, 173)";
+
+    ibtn.style.backgroundColor = "white";
+    ibtn.style.color = "black";
+
+    abtn.style.backgroundColor = "white";
+    abtn.style.color = "black";
+
+    //show editor
+    document.getElementById("frontpage").style.display="flex";
+    document.getElementById("indexmaker").style.display="none";
+    document.getElementById("ack").style.display="none";
+
+}
+
+function showIndex(){
+    ibtn.style.backgroundColor = "rgb(0, 179, 255)";
+    
+    fbtn.style.backgroundColor = "white";
+    fbtn.style.color = "black";
+
+    abtn.style.backgroundColor = "white";
+    abtn.style.color = "black";
+
+
+    //toggle editor
+    document.getElementById("frontpage").style.display="none";
+    document.getElementById("indexmaker").style.display="flex";
+    document.getElementById("ack").style.display="none";
+}
+
+function showAck(){
+    abtn.style.backgroundColor = "rgb(0, 179, 255)";
+
+    fbtn.style.backgroundColor = "white";
+    fbtn.style.color = "black";
+
+    ibtn.style.backgroundColor = "white";
+    ibtn.style.color = "black";
+
+
+     //toggle editor
+    document.getElementById("frontpage").style.display="none";
+    document.getElementById("indexmaker").style.display="none";
+    document.getElementById("ack").style.display="flex";
+    
+}
+// //exit
+// window.addEventListener("beforeunload", function (e) {
+//     e.preventDefault();
+//     e.returnValue = "";
+// });
+
+

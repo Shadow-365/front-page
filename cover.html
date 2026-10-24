@@ -36,8 +36,23 @@
                <a href="p-policy.html"><button  id="mre2">Privacy policy</button> </a>
                <a href="about.html"><button>About</button></a>
         </div>
+
         <img src="pictures/down.png" id="more-down">
+
+
+        <div id="front-index">
+
+            <button onClick="showFrontPage()" id="fp">frontpage</button>
+
+            <button onClick="showIndex()" id="si">index</button>
+
+             <button onClick="showAck()" id="ack-btn">Acknowledge/Certificate</button>
+        </div>
+
+        <br>
+        <br>
         
+        <div id="frontpage">
         <label for="clg">
             Select institution name:
         </label>  
@@ -131,6 +146,40 @@ Date:  06-05-2026
         <p id="verc" onclick="toggleVer()">See log...</p>
 
         <button onclick="next()" id="nxt">NEXT >></button>
+        </div>
+
+
+
+
+        <!-- Index Maker-->
+
+        <div id="indexmaker">
+            <!-- <textarea id="submit-by"></textarea>
+
+            <div class="texto">
+                <input type="text" placeholder="Enter the task" id="task">
+                <button onclick="add()" class="add">Add</button>
+            </div>
+            <hr>
+            <div class="lis">
+                <ul id="listy"><li  id="hi"><h3>Hi! What's on your mind!</h3></li></ul>
+            </div> -->
+            <h2>Coming Soon..!</h2>
+             
+           
+
+
+        </div>
+
+
+        <!--Custom Acknowledgement-->
+
+            <div id="ack">
+        
+            <h2>Coming Soon..!</h2>
+             
+            </div>
+
         
     </div>
 
@@ -143,13 +192,18 @@ Date:  06-05-2026
 
 
     <div class="btn-hold">
-        <button onclick="edit()" id="edt"><< Edit</button>
+         
+                <button onclick="edit()" id="edt"><< Edit</button>  
 
 
-          <button type="button" onclick="savepdf()" id="dwn">Download PDF</button>
+                <button type="button" onclick="savepdf()" id="dwn">Download PDF</button>
 
     </div>
-        
+    
+            <div id="hold-footer">
+                <button onClick="changeFont(1)" class="fontA">Increase font (A+)</button>
+                <button onClick="changeFont(-1)" class="fontA">Decrease font (A-)</button>
+            </div>
     
  
  
@@ -258,10 +312,7 @@ Department of Geogrphy
     
    <div id="switch"></div>
 
-<div id="hold-footer">
-        <button onClick="changeFont(1)" class="fontA">Increase font (A+)</button>
-        <button onClick="changeFont(-1)" class="fontA">Decrease font (A-)</button>
-</div>
+
    <!-- fire base using content delivery network CDN-->
     <script type="module" src="analyse.js">
  
